@@ -1,0 +1,300 @@
+/* =========================================
+   1. الإعدادات الأساسية والتمرير
+========================================= */
+html {
+    scroll-behavior: smooth !important;
+    scroll-padding-top: 80px; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2b2b2b;
+    line-height: 2.0;
+    background-color: #fcfcfc;
+}
+
+/* تخصيص شريط التمرير */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+    background: #2b2b2b; 
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d9231d; 
+}
+
+section {
+    padding: 40px 0;
+}
+
+/* =========================================
+   2. شريط الملاحة الزجاجي
+========================================= */
+nav.glass-nav {
+    position: fixed;        
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;          
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.6);  
+    backdrop-filter: blur(12px);            
+    -webkit-backdrop-filter: blur(12px);    
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);        
+}
+
+nav.glass-nav ol {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+}
+
+nav.glass-nav a {
+    text-decoration: none;
+    color: #333333; 
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease; 
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav.glass-nav a:hover {
+    color: #d9231d; 
+    background: rgba(219, 35, 29, 0.1); 
+}
+
+/* =========================================
+   3. الجدول
+========================================= */
+table {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse; 
+    margin: 20px auto;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+}
+th {
+    background-color: #333333;
+    color: #ffffff;
+}
+tr:hover {
+    background-color: #f5f5f5; 
+}
+
+/* =========================================
+   4. الاستمارة
+========================================= */
+input[type="text"], input[type="tel"], select {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #cccccc;
+    border-radius: 6px; 
+    box-sizing: border-box;
+    transition: all 0.2s ease; 
+}
+
+input:focus, select:focus {
+    border-color: #d9231d;
+    outline: none;
+    box-shadow: 0 0 10px rgba(217, 35, 29, 0.25); 
+    transform: scale(1.02); 
+}
+
+button[type="submit"] {
+    background-color: #d9231d; 
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #000000; 
+}
+
+/* =========================================
+   5. آراء الطلاب
+========================================= */
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; 
+    margin: 30px auto;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); 
+    padding: 25px;
+    flex: 1;
+    min-width: 280px; 
+    max-width: 320px;
+    border-top: 4px solid #d9231d; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: #555555;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+
+.student-info h4 {
+    margin: 0;
+    color: #2b2b2b;
+    font-size: 16px;
+}
+
+.student-info span {
+    color: #d9231d; 
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.stars {
+    color: #ffcc00; 
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* =========================================
+   6. زر الواتساب العائم
+========================================= */
+.whatsapp-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    z-index: 2000;
+    font-size: 14px;
+    animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+    50% { transform: scale(1.05); box-shadow: 0 4px 25px rgba(37, 211, 102, 0.5); }
+    100% { transform: scale(1); box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3); }
+}
+
+/* =========================================
+   7. المميزات
+========================================= */
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; 
+    margin: 30px auto 0 auto;
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+.benefit-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04); 
+    padding: 30px 20px;
+    flex: 1;
+    min-width: 280px; 
+    max-width: 320px;
+    border-bottom: 4px solid #333333; 
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px); 
+    border-bottom-color: #d9231d; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
+}
+
+.benefit-icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+    margin: 0 0 10px 0;
+    color: #2b2b2b;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.benefit-card p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* =========================================
+   8. التجاوب مع الهواتف
+========================================= */
+@media screen and (max-width: 768px) {
+    body { overflow-x: hidden; }
+    div { padding: 10px !important; }
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100% !important;
+        box-sizing: border-box; 
+    }
+    thead tr { position: absolute; top: -9999px; left: -9999px; }
+    tr {
+        background: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 8px;
+        margin-bottom: 20px; 
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid #eeeeee; 
+        position: relative;
+        padding-left: 45% !important; 
+        text-align: right; 
+        word-wrap: break-word; 
+    }
+    td:nth-child(1):before { content: "Day: "; font-weight: bold; float: left; }
+    td:nth-child(2):before { content: "Morning: "; font-weight: bold; float: left; }
+    td:nth-child(3):before { content: "Evening: "; font-weight: bold; float: left; }
+}
